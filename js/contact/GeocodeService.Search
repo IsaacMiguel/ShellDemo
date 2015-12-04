@@ -1,0 +1,281 @@
+/**/_xdc_._gbzn0v && _xdc_._gbzn0v( {
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "Sídney",
+               "short_name" : "Sídney",
+               "types" : [ "colloquial_area", "locality", "political" ]
+            },
+            {
+               "long_name" : "Nueva Gales del Sur",
+               "short_name" : "NSW",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Australia",
+               "short_name" : "AU",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Sídney Nueva Gales del Sur, Australia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -33.4245981,
+                  "lng" : 151.3426361
+               },
+               "southwest" : {
+                  "lat" : -34.1692489,
+                  "lng" : 150.502229
+               }
+            },
+            "location" : {
+               "lat" : -33.8674869,
+               "lng" : 151.2069902
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.4245981,
+                  "lng" : 151.3426361
+               },
+               "southwest" : {
+                  "lat" : -34.1692489,
+                  "lng" : 150.502229
+               }
+            }
+         },
+         "place_id" : "ChIJP3Sa8ziYEmsRUKgyFmh9AQM",
+         "types" : [ "colloquial_area", "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Sídney",
+               "short_name" : "Sídney",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Nueva Gales del Sur",
+               "short_name" : "NSW",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Australia",
+               "short_name" : "AU",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Sidney Nueva Gales del Sur, Australia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -33.8561177,
+                  "lng" : 151.2229549
+               },
+               "southwest" : {
+                  "lat" : -33.879786,
+                  "lng" : 151.1971341
+               }
+            },
+            "location" : {
+               "lat" : -33.873651,
+               "lng" : 151.2068896
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8561177,
+                  "lng" : 151.2229549
+               },
+               "southwest" : {
+                  "lat" : -33.879786,
+                  "lng" : 151.1971341
+               }
+            }
+         },
+         "place_id" : "ChIJP5iLHkCuEmsRwMwyFmh9AQU",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Sidney",
+               "short_name" : "Sidney",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Municipio de Clinton",
+               "short_name" : "Municipio de Clinton",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Condado de Shelby",
+               "short_name" : "Condado de Shelby",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Ohio",
+               "short_name" : "OH",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Estados Unidos",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Sidney, Ohio, EE. UU.",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 40.324103,
+                  "lng" : -84.1180299
+               },
+               "southwest" : {
+                  "lat" : 40.2539969,
+                  "lng" : -84.216291
+               }
+            },
+            "location" : {
+               "lat" : 40.2842164,
+               "lng" : -84.1554987
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 40.324103,
+                  "lng" : -84.1180299
+               },
+               "southwest" : {
+                  "lat" : 40.2539969,
+                  "lng" : -84.216291
+               }
+            }
+         },
+         "place_id" : "ChIJP_iExpEMP4gRzOa4U9qCKAY",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Sidney",
+               "short_name" : "Sidney",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Condado de Cheyenne",
+               "short_name" : "Condado de Cheyenne",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Nebraska",
+               "short_name" : "NE",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Estados Unidos",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "69162",
+               "short_name" : "69162",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Sidney, Nebraska 69162, EE. UU.",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 41.15650780000001,
+                  "lng" : -102.9405759
+               },
+               "southwest" : {
+                  "lat" : 41.109549,
+                  "lng" : -102.998219
+               }
+            },
+            "location" : {
+               "lat" : 41.1448219,
+               "lng" : -102.9774497
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 41.15650780000001,
+                  "lng" : -102.9405759
+               },
+               "southwest" : {
+                  "lat" : 41.109549,
+                  "lng" : -102.998219
+               }
+            }
+         },
+         "place_id" : "ChIJtVzoBn-tcYcR83vYoP_1Pyk",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Sidney",
+               "short_name" : "Sidney",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Condado de Richland",
+               "short_name" : "Condado de Richland",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Montana",
+               "short_name" : "MT",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Estados Unidos",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "59270",
+               "short_name" : "59270",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Sidney, Montana 59270, EE. UU.",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 47.7295171,
+                  "lng" : -104.1360509
+               },
+               "southwest" : {
+                  "lat" : 47.6960878,
+                  "lng" : -104.206216
+               }
+            },
+            "location" : {
+               "lat" : 47.7166836,
+               "lng" : -104.1563253
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 47.7295171,
+                  "lng" : -104.1360509
+               },
+               "southwest" : {
+                  "lat" : 47.6960878,
+                  "lng" : -104.206216
+               }
+            }
+         },
+         "place_id" : "ChIJq3eWf4ZxJFMRhAMlC94gOm4",
+         "types" : [ "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
+}
+ )

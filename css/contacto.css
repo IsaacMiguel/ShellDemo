@@ -1,0 +1,8 @@
+.contact-form {
+    width:480px;
+    /*margin:0 auto; comentado para que no se ponga el formulario de login arriba de todo*/
+}
+.contact-form span {
+    color:#6C6C60;
+    font-size:1.3em;
+}
