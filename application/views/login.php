@@ -108,8 +108,17 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
           <h4 class="modal-title" id="myModalLabel1">Login</h4>
         </div>
-          <form action="http://prueba.sqldata.com.ar/index.php/login" method="POST">
+          <form action="<?php echo base_url();?>login" method="POST">
         <div class="modal-body" id="login_details">
+          *<span style="font-weight:bold;">Sucursal:</span><br>
+          <select id="branch" name="branch">
+            <option value="0" selected>Seleccionar</option>
+            <option value="1694">1694</option>
+            <option value="1420">1420</option>
+            <option value="441">441</option>
+            <option value="1452">1452</option>
+            <option value="1080">1080</option>
+          </select><br><br>
           *<span style="font-weight:bold;">Usuario:</span><br>
           <input type="text" placeholder="username" id="user" name="user"><br><br>
           *<span style="font-weight:bold;">Password</span><br>

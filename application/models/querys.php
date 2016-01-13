@@ -15,6 +15,5 @@ class Querys extends CI_Model
 			return false;
 		}
 	}
-
 }
 ?>

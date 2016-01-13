@@ -5,21 +5,37 @@
 class Login extends CI_Controller
 {
 	public function index(){
-		$user = $this->input->post('user');
-		$pass = $this->input->post('password');
+		$acount = $this->input->post('user');
+		$password = $this->input->post('password');
+		$dbs = $this->input->post('branch');
 
+		$acount = strtoupper($acount);
+		$password = strtoupper($password);
 
-		if ($user == '' && $pass == '') {
+		$this->load->model('log');
+
+		$data = $this->log->auth($acount, $dbs);
+
+		if ($data->pass == $password) {
+			$sesData = array(
+				'user' => $acount,
+				'num_oferta' => -1,
+				'branch' => $dbs,
+				'log' => TRUE);
+
+			$this->session->set_userdata($sesData);
+
 			$this->load->view('admin/header');
 			$this->load->view('admin/home');
 			$this->load->view('admin/footer');
+
 		}else{
-			echo "incorrecto";
+			header('Location: ' . base_url());
 		}
 	}
 
 	public function queryOil(){
-		$suc = $this->input->post('suc');
+		$suc = $this->session->userdata('branch');
 		$fi = $this->input->post('fi');
 		$ff = $this->input->post('ff');
 

@@ -15,6 +15,7 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right">
+    <li><a>Sucursal -> <?php echo $this->session->userdata('branch');?></a></li>
       <li><a href="/">Salir</a></li>
       <li>X</li>
     </ul>
@@ -39,20 +40,6 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="col-sm-1">
-                        <p style="text-align: center;"><strong>Sucursal: </strong></p>
-                    </div>
-                    <div class="col-sm-2">
-                        <select name="sucursales" id="sucursales" class="form-control" style="widht: 100%;">
-                            <option value="0" selected>Sucursal</option>
-                            <option value="1694">1694</option>
-                            <option value="1420">1420</option>
-                            <option value="441">441</option>
-                            <option value="1452">1452</option>
-                            <option value="1080">1080</option>
-                        </select>    
-                    </div>
-
                     <div class="col-sm-3">
                         <input class="form-control" type="date" id="fechainicio" name="fechainicio">
                     </div>
