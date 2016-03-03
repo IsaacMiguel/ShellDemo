@@ -6,6 +6,13 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
       <link rel="stylesheet" href="https://rawgit.com/FragCoder/bootstrap-left-slide-menu/master/bootstrap-left-slide-menu.css">
+    
+      <link href='<?php echo base_url();?>../css/metricsgraphics.css' rel='stylesheet' type='text/css' id='light'>
+      <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js' charset='utf-8'></script>
+      <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+      <script src='<?php echo base_url();?>../js/metricsgraphics.js'></script>
+    
     </head>
  <body>
     <div id="wrapper" class="">
@@ -31,7 +38,7 @@
                 <a href="#"><i class="glyphicon glyphicon-cog"></i> ...</a>
              </li>
              <li>
-                <a href="<?php echo base_url();?>login/signOut"><i class="glyphicon glyphicon-log-out"></i> Log Out</a>
+             		<a href="<?php echo base_url();?>login/signOut"><i class="glyphicon glyphicon-log-out"></i> Log Out</a>
              </li>
           </ul>
        </nav>
