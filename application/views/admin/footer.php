@@ -51,8 +51,8 @@
                                 title: "Metricas",
                                 description: "Grafico de consumos de conbustibles en pesos",
                                 data: data,
-                                width: 620,
-                                height: 240,
+                                full_width: true,
+                                height: 340,
                                 right: 80,
                                 target: document.getElementById('fake_users1'),
                                 x_accessor: 'date',
@@ -62,6 +62,17 @@
                         });
                     }
                 }
+            });
+
+            $('#bClient').click(function () {
+                var name = $('#client').val();
+
+                $.post('<?php echo base_url();?>fuelClient/listClients/',
+                    {
+                        name : name
+                    }, function (data) {
+                        $('#contenido').html(data);
+                    });
             });
         });
     </script>

@@ -48,5 +48,13 @@ class Querys extends CI_Model
 
 		return $data->result();
 	}
+
+	public function getFuelClient($suc, $name){
+		$db = $this->load->database($suc, true);
+
+		$data = $db->query("select cl_nume, cl_apel, cl_cuit from clientes where cl_apel like '%".$name."%'");
+
+		return $data->result();
+	}
 }
 ?>
