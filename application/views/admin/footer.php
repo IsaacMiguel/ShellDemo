@@ -4,6 +4,8 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
+            $('#board').hide();
+
             $('#btnBuscar').click(function (){
                 var suc = $('#sucursales').val();
                 var fi = $('#fechainicio').val();
@@ -72,7 +74,50 @@
                         name : name
                     }, function (data) {
                         $('#contenido').html(data);
+                        $('#board').show();
                     });
+
+            });
+
+            $('#bClientFuel').click(function () {
+                var fi = $('#fechainicio').val();
+                var ff = $('#fechafin').val();
+                var name = $('#selectClient').val();
+
+                function changeDate(date){
+                // input: yyyy-mm-dd
+                fechaus = date.substring(8,10) + "/" + date.substring(5,7) + "/" + date.substring(0,4);
+                return fechaus;
+                // output: dd/mm/yyyy
+                }
+
+                if (fi != '') {
+                    fi = changeDate(fi);
+                }
+                
+                if (ff != '') {
+                    ff = changeDate(ff);
+                }
+                
+                if (fi == '' || ff == '' || name == 0) {
+                    alert("debe completar todos los campos");
+                }else{
+                    console.log('fechainicio: ' + fi)
+                    console.log('fechafin: ' + ff)
+                    console.log('cliente: ' + name)
+
+                    $.post('<?php echo base_url();?>fuelClient/getPrices/',
+                        {
+                            fi : fi,
+                            ff : ff,
+                            name : name
+                        }, function (data) {
+                            $('#grilla').html(data);
+                            console.log(data)
+                        }
+                    );
+                }
+                
             });
         });
     </script>
