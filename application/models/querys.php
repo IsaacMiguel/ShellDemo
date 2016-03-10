@@ -60,8 +60,7 @@ class Querys extends CI_Model
 	public function pricesClient($suc, $fi, $ff, $client){
 		$db = $this->load->database($suc, true);
 
-		$data = $db->query("select  st_codigo1 as CdInterno, st_codigo2 as CdShell, st_nombre as Nombre , Sum(f2_canti) as Cantidad,  f2_puni as Punitario,  fa_fecha as FechaFc, f2_codigo as Interno from fac2 left join fact on fact.fa_nume=f2_nume and Cast(fact.fa_tipo as varbinary(8)) =Cast(fac2.f2_tipo as varbinary(8)) left join stock    on stock.st_interno = f2_codigo left join turno1 on Fact.fa_turno = Turno1.id_turno1 where fact.fa_tico < 4 and convert(datetime,convert(char,fecha_a,103)) >= '".$fi."' and convert(datetime,convert(char,fecha_a,103)) <= '".$ff."' and f2_clie=".$client."  and stock.st_tipo=8 group by f2_codigo, f2_puni");
-		//$data = $db->query("select max(f2_codigo) as codigo, sum(f2_canti) as cantidad , max(fa_nume) as numerofa , max(st_nombre) as nombre , max(Turno1.id_turno1) as turno from fac2 left join fact on fact.fa_nume=f2_nume and Cast(fact.fa_tipo as varbinary(8)) =Cast(fac2.f2_tipo  as varbinary(8)) left join stock on stock.st_interno = f2_codigo left join turno1 on Fact.fa_turno = Turno1.id_turno1 where f2_clie=".$client." and convert(datetime,convert(char,fecha_a,103)) >='".$fi."' group by f2_codigo");
+		$data = $db->query("select Max(st_codigo1) as CdInterno, Max(st_codigo2) as CdShell, Max(st_nombre) as Nombre, Sum(f2_canti) as Cantidad, max(f2_puni) as Punitario, max(fa_fecha) as FechaFc, max(f2_codigo) as Interno from fac2 left join fact on fact.fa_nume=f2_nume and Cast(fact.fa_tipo as varbinary(8)) =Cast(fac2.f2_tipo  as varbinary(8)) left join stock on stock.st_interno = f2_codigo left join turno1 on Fact.fa_turno = Turno1.id_turno1 where fact.fa_tico < 4 and convert(char,fecha_a,111) >= '".$fi."' and convert(char,fecha_a,111) <= '".$ff."' and f2_clie=".$client."  and stock.st_tipo=8  group by f2_codigo, f2_puni");
 
 		return $data->result();
 	}
