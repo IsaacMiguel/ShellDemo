@@ -86,9 +86,9 @@
 
                 function changeDate(date){
                 // input: yyyy-mm-dd
-                fechaus = date.substring(8,10) + "/" + date.substring(5,7) + "/" + date.substring(0,4);
+                fechaus = date.substring(0,4) + "/" + date.substring(5,7) + "/" + date.substring(8,10);
                 return fechaus;
-                // output: dd/mm/yyyy
+                // output: yyyy/mm/dd
                 }
 
                 if (fi != '') {
@@ -102,10 +102,7 @@
                 if (fi == '' || ff == '' || name == 0) {
                     alert("debe completar todos los campos");
                 }else{
-                    console.log('fechainicio: ' + fi)
-                    console.log('fechafin: ' + ff)
-                    console.log('cliente: ' + name)
-
+                    $('#grilla').html('<center><h2>Buscando...</h2></center>');
                     $.post('<?php echo base_url();?>fuelClient/getPrices/',
                         {
                             fi : fi,
@@ -113,11 +110,10 @@
                             name : name
                         }, function (data) {
                             $('#grilla').html(data);
-                            console.log(data)
                         }
                     );
                 }
-                
+
             });
         });
     </script>

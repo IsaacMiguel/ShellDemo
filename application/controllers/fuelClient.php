@@ -56,37 +56,39 @@ class FuelClient extends CI_Controller
 			$data = $this->querys->pricesClient($suc, $fi, $ff, $client);
 
 			echo "<div class='col-sm-1'>";
-				echo "<p>Interno</p>";
+				echo "<strong><p>Interno</p></strong>";
 			echo "</div>";
 
 			echo "<div class='col-sm-2'>";
-				echo "<p>CdShell</p>";
+				echo "<strong><p>CdShell</p></strong>";
 			echo "</div>";
 
 			echo "<div class='col-sm-2'>";
-				echo "<p>Nombre </p>";
+				echo "<strong><p>Nombre </p></strong>";
 			echo "</div>";
 
 			echo "<div class='col-sm-2'>";
-				echo "<p>Cantidad</p>";
+				echo "<strong><p>Cantidad</p></strong>";
 			echo "</div>";
 
 			echo "<div class='col-sm-2'>";
-				echo "<p>Punitario</p>";
+				echo "<strong><p>Punitario</p></strong>";
 			echo "</div>";
 
 			echo "<div class='col-sm-2'>";
-				echo "<p>FechaFc </p>";
+				echo "<strong><p>FechaFc </p></strong>";
 			echo "</div>";
 
 			echo "<div class='col-sm-1'>";
-				echo "<p>Interno</p>";
+				echo "<strong><p>Interno</p></strong>";
 			echo "</div>";
 
 			foreach ($data as $d) {
 				echo "<div class='row'>";
 					echo "<div class='col-sm-1'>";
-						echo $d->CdInterno;
+						echo "<center>";
+							echo $d->CdInterno;
+						echo "</center>";
 					echo "</div>";
 
 					echo "<div class='col-sm-2'>";
@@ -106,7 +108,8 @@ class FuelClient extends CI_Controller
 					echo "</div>";
 
 					echo "<div class='col-sm-2'>";
-						echo $d->FechaFc ;
+						$strdate = strtotime($d->FechaFc);
+						echo date('d/m/Y' ,$strdate);
 					echo "</div>";
 
 					echo "<div class='col-sm-1'>";
