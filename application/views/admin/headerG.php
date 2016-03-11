@@ -29,13 +29,10 @@
                 <a href="<?php echo base_url();?>pactivos"><i class="glyphicon glyphicon-print"></i> P.V. Activos</a>
              </li>
              <li>
-                <a href="<?php echo base_url();?>metrics"><i class="glyphicon glyphicon-cloud"></i> M&eacutetricas</a>
+                <a href="<?php echo base_url();?>metrics"><i class="glyphicon glyphicon-object-align-bottom"></i> M&eacutetricas</a>
              </li>
              <li>
-                <a href="<?php echo base_url();?>fuelClient"><i class="glyphicon glyphicon-th"></i> Combustibles 1 cliente</a>
-             </li>
-             <li>
-                <a href="#"><i class="glyphicon glyphicon-cog"></i> ...</a>
+                <a href="<?php echo base_url();?>fuelClient"><i class="glyphicon glyphicon-filter"></i> Combustibles 1 cliente</a>
              </li>
              <li>
              		<a href="<?php echo base_url();?>login/signOut"><i class="glyphicon glyphicon-log-out"></i> Log Out</a>
