@@ -16,7 +16,8 @@ class Login extends CI_Controller
 
 		$data = $this->log->auth($acount, $dbs);
 
-		if ($data->pass == $password) {
+		if ($data != '') {
+			if ($data->pass == $password) {
 			$sesData = array(
 				'user' => $acount,
 				'num_oferta' => -1,
@@ -29,9 +30,15 @@ class Login extends CI_Controller
 			$this->load->view('admin/home');
 			$this->load->view('admin/footer');
 
+			}else{
+				$data['refused'] = true;
+				$this->load->view('login', $data);
+			}
 		}else{
-			header('Location: http://opecom.com.ar/');
+			$data['refused'] = true;
+			$this->load->view('login', $data);
 		}
+
 	}
 
 	public function signOut(){

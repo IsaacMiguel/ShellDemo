@@ -20,22 +20,6 @@
     <!-- <script src="/js/bootstrap.js"></script> -->
     <link rel="shortcut icon" href="/uploads/casportfavicon.png" type="image/x-icon">
     <link rel="icon" href="/uploads/shell-logo-small.jpg" type="image/x-icon">
-
-    <script type="text/javascript">
-      function submitRequest () {
-        var subReq = document.getElementById('submitForm');
-        
-        subReq.addEventListener('click', function (event) {
-          var branch = document.getElementById('branch').value;
-          if (branch == 0) {
-            alert('Seleccione una sucursal');
-            event.preventDefault();
-          }
-        });
-      }
-
-      window.onload = submitRequest;
-    </script>
 </head>
 
 <body>
@@ -143,7 +127,11 @@
     <div class="modal-dialog" style="margin-top: 150px;">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <a href="#">
+              <span class="glyphicon glyphicon-remove"></span>
+            </a>
+          </button>
           <h4 class="modal-title" id="myModalLabel1">Login</h4>
         </div>
           <form id="targ" action="<?php echo base_url();?>login" method="POST">
@@ -160,7 +148,7 @@
           *<span style="font-weight:bold;">Usuario:</span><br>
           <input type="text" placeholder="username" id="user" name="user" required><br><br>
           *<span style="font-weight:bold;">Password</span><br>
-          <input type="password" placeholder="Password" id="password" name="password" required><br>
+          <input type="password" placeholder="Password" id="password" name="password" required>&nbsp<input type="checkbox" id="showPassword"> Mostrar contrase&ntildea<br>
 
         </div>
         <div class="modal-footer">
@@ -176,5 +164,53 @@
   </div><!-- /.modal -->
   <!--Modal Login Ends -->
   <!-- End code for Login Popup -->
+  <script type="text/javascript">
+    $('#showPassword').click(function () {
+      if ($(this).is(':checked')) {
+        $('#password').attr('type', 'text');
+      }else{
+        $('#password').attr('type', 'password');
+      }
+    });
+
+    <?php if ($refused == true) {
+      echo "<script>alert('Usuario y/o Contraseña incorrectos')</script>";
+    }?>
+
+      (function ($) {
+          $.toggleShowPassword = function (options) {
+              var settings = $.extend({
+                  field: "#password",
+                  control: "#toggle_show_password",
+              }, options);
+
+              var control = $(settings.control);
+              var field = $(settings.field)
+
+              control.bind('click', function () {
+                  if (control.is(':checked')) {
+                      field.attr('type', 'text');
+                  } else {
+                      field.attr('type', 'password');
+                  }
+              })
+          };
+      }(jQuery));
+
+      function submitRequest () {
+
+        var subReq = document.getElementById('submitForm');
+        
+        subReq.addEventListener('click', function (event) {
+          var branch = document.getElementById('branch').value;
+          if (branch == 0) {
+            alert('Seleccione una sucursal');
+            event.preventDefault();
+          }
+        });
+      }
+
+      window.onload = submitRequest;
+    </script>
 </body>
 </html>

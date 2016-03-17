@@ -6,7 +6,8 @@ class Home extends CI_Controller
 {
 	
 	public function index(){
-		$this->load->view('login');
+		$data['refused'] = false;
+		$this->load->view('login', $data);
 	}
 }
 ?>
