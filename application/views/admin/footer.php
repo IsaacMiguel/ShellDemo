@@ -42,6 +42,7 @@
                     if (fi > ff || fi == '' || ff == '') {
                         alert("Cargue correctamente las fechas!")
                     }else{
+                        
                         d3.json('http://opecom.com.ar/index.php/metrics/getMetrics/' + fi + '/' + ff, function (data) {
                             var fuels = [];
                             for (var i = 0; i < data.length; i++) {
@@ -62,6 +63,15 @@
                                 legend: fuels
                             });
                         });
+                        
+                        $.post('http://opecom.com.ar/index.php/metrics/getMetricsGrid/',
+                            {
+                                fi : fi,
+                                ff : ff
+                            }, function (data) {
+                                $('#gridMetric').html(data);
+                            }
+                        );
                     }
                 }
             });
