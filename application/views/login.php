@@ -9,14 +9,14 @@
     <title>Shell</title>
     <script src="/js/jquery-1.10.2.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <!-- Bootstrap core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
 
     <!-- Custom Google Web Font -->
     <link href="/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- <script src="/js/bootstrap.js"></script> -->
     <link rel="shortcut icon" href="/uploads/casportfavicon.png" type="image/x-icon">
     <link rel="icon" href="/uploads/shell-logo-small.jpg" type="image/x-icon">
@@ -24,7 +24,7 @@
 
 <body>
   <div class="row">
-    <div class="col-lg-2 col-lg-offset-10">
+
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
 
@@ -35,21 +35,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><img alt="Brand" class="img-responsive" src="/uploads/shell-logo-small.jpg"></a>
+          <img style="padding-left: 30px;" alt="Brand" class="img-responsive" src="/uploads/shell-logo-small.png">
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a style="cursor:pointer;" data-toggle="modal" data-target="#login" id="loginpopup">Login</a></li>
+            <li style="padding-right: 30px;"><a style="cursor:pointer;" data-toggle="modal" data-target="#login" id="loginpopup"><strong>Login</strong></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </nav>
-    </div>
+    
   </div>
 
-  <div class="row">
-    <div class="col-lg-12">
+  <div class="row" style="margin: 0px;">
+    <div class="col-md-12" style="padding: 0px;">
       <div class="intro-header" id="home">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -66,25 +66,25 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item">
-            <img src="/uploads/portrait1.jpg" alt="Casport 1">
+            <img class="img-responsive" src="/uploads/portrait1.jpg" alt="Casport 1">
           </div>
           <div class="item active">
-            <img src="/uploads/portrait2.jpg" alt="Casport 2">
+            <img class="img-responsive" src="/uploads/portrait2.jpg" alt="Casport 2">
           </div>
           <div class="item">
-            <img src="/uploads/portrait3.jpg" alt="Casport 3">
+            <img class="img-responsive" src="/uploads/portrait3.jpg" alt="Casport 3">
           </div>
           <div class="item">
-            <img src="/uploads/1.jpg" alt="Casport 4">
+            <img class="img-responsive" src="/uploads/1.jpg" alt="Casport 4">
           </div>
           <div class="item">
-            <img src="/uploads/2.jpg" alt="Casport 5">
+            <img class="img-responsive" src="/uploads/2.jpg" alt="Casport 5">
           </div>
           <div class="item">
-            <img src="/uploads/3.jpg" alt="Casport 6">
+            <img class="img-responsive" src="/uploads/3.jpg" alt="Casport 6">
           </div>
           <div class="item">
-            <img src="/uploads/4.jpg" alt="Casport 7">
+            <img class="img-responsive" src="/uploads/4.jpg" alt="Casport 7">
           </div>
         </div>
       
@@ -104,15 +104,16 @@
   </div>
   <!-- /.intro-header -->
 <br>
+<hr>
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-12">
                   <div class="row">
-                    <div class="col-lg-1 col-lg-offset-1">
+                    <div class="col-md-1 col-md-offset-1">
                       <img src="/uploads/LogoLeandroDapelloChico.png" class="img-responsive pull-left logoLD">
                     </div>
-                    <div class="col-lg-10">
+                    <div class="col-md-10">
                       <p class="copyright text-muted small">Powered By <a href="http://www.LeandroDapello.com" target="_blank">LeandroDapello.com</a></p>
                       <p class="copyright text-muted small">Este sitio esta optimizado para Internet Explorer 10 o superior, FireFox y Google Chrome</p>
                     </div>
