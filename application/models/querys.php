@@ -62,6 +62,19 @@ class Querys extends CI_Model
 
 		$data = $db->query("select Max(st_codigo1) as CdInterno, Max(st_codigo2) as CdShell, Max(st_nombre) as Nombre, Sum(f2_canti) as Cantidad, max(f2_puni) as Punitario, max(fa_fecha) as FechaFc, max(f2_codigo) as Interno from fac2 left join fact on fact.fa_nume=f2_nume and Cast(fact.fa_tipo as varbinary(8)) =Cast(fac2.f2_tipo  as varbinary(8)) left join stock on stock.st_interno = f2_codigo left join turno1 on Fact.fa_turno = Turno1.id_turno1 where fact.fa_tico < 4 and convert(char,fecha_a,111) >= '".$fi."' and convert(char,fecha_a,111) <= '".$ff."' and f2_clie=".$client."  and stock.st_tipo=8  group by f2_codigo, f2_puni");
 
+		if ($data->num_rows > 0) {
+			return $data->result();
+		}else{
+			return false;
+		}
+	}
+
+	public function getMetGrid($suc, $fi, $ff){
+
+		$db = $this->load->database($suc, true);
+
+		$data = $db->query("select sum(convert( int, turno2.dife)) as value, sum(turno2.dife* turno2.precio) as Pesos, rtrim(max(convert(char, turno1.fecha_a, 23))) as date, max(surtidores.cod_combus) as interno  , max(st_combustible) as cod_comb  , max(Combustibles.Nombre) as NomComb from turno2 left join turno1 on turno2.id_turno2=turno1.id_turno1 left join surtidores on turno2.surtidor=surtidores.codigo left join stock on surtidores.cod_combus=stock.st_interno left join Combustibles on Combustibles.codigo=stock.st_combustible	where convert(char,turno1.fecha_A,111)>= '".$fi."' and convert(char,turno1.fecha_A,111)<= '".$ff."'	group by convert(char,surtidores.cod_combus,103)+convert(char,turno1.fecha_A,103) order by date, NomComb");
+
 		return $data->result();
 	}
 }
