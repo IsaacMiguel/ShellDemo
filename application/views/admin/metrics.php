@@ -34,12 +34,18 @@
                                             <div class="row">
                                                 <br>
                                                 <center><div id='fake_users1'></div></center>
+
                                             </div> <!-- endrow-->
                                         <!--</div>  endcontainer -->
                                     </tbody>
                                 </table>
                         </div><!--div col xs12 -->
                     </div><!--div row -->
+                    <div class="row">
+                        <div class="col-xs-12 col-xs-offset-1" id='gridMetric' style="font-size: 11px;">
+                                                        
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
