@@ -83,40 +83,45 @@ class FuelClient extends CI_Controller
 				echo "<strong><p>Interno</p></strong>";
 			echo "</div>";
 
-			foreach ($data as $d) {
-				echo "<div class='row'>";
-					echo "<div class='col-sm-1'>";
-						echo "<center>";
-							echo $d->CdInterno;
-						echo "</center>";
-					echo "</div>";
 
-					echo "<div class='col-sm-2'>";
-						echo $d->CdShell;
-					echo "</div>";
+			if ($data == false) {
+				echo "<center><strong><h3>No se encontraron resultados...</h3></strong></center>";
+			}else{
+				foreach ($data as $d) {
+					echo "<div class='row'>";
+						echo "<div class='col-sm-1'>";
+							echo "<center>";
+								echo $d->CdInterno;
+							echo "</center>";
+						echo "</div>";
 
-					echo "<div class='col-sm-2'>";
-						echo $d->Nombre ;
-					echo "</div>";
+						echo "<div class='col-sm-2'>";
+							echo $d->CdShell;
+						echo "</div>";
 
-					echo "<div class='col-sm-2'>";
-						echo $d->Cantidad;
-					echo "</div>";
+						echo "<div class='col-sm-2'>";
+							echo $d->Nombre ;
+						echo "</div>";
 
-					echo "<div class='col-sm-2'>";
-						echo $d->Punitario;
-					echo "</div>";
+						echo "<div class='col-sm-2'>";
+							echo $d->Cantidad;
+						echo "</div>";
 
-					echo "<div class='col-sm-2'>";
-						$strdate = strtotime($d->FechaFc);
-						echo date('d/m/Y' ,$strdate);
-					echo "</div>";
+						echo "<div class='col-sm-2'>";
+							echo $d->Punitario;
+						echo "</div>";
 
-					echo "<div class='col-sm-1'>";
-						echo $d->Interno;
+						echo "<div class='col-sm-2'>";
+							$strdate = strtotime($d->FechaFc);
+							echo date('d/m/Y', $strdate);
+						echo "</div>";
+
+						echo "<div class='col-sm-1'>";
+							echo $d->Interno;
+						echo "</div>";
 					echo "</div>";
-				echo "</div>";
-			}
+				}
+			}			
 		}
 	}
 }
