@@ -10,7 +10,9 @@ class Log extends CI_Model
 
 		if ($data->num_rows() > 0) {
 			return $data->row();
-		}	
+		}else{
+			return false;
+		}
 	}
 }
 ?>
