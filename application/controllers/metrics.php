@@ -71,8 +71,8 @@ class Metrics extends CI_Controller
 		if ($this->session->userdata('log')) {
 			$suc = $this->session->userdata('branch');
 
-			$fi = $this->input->post('fi');
-			$ff = $this->input->post('ff');
+			$fi = $this->input->get('fi');
+			$ff = $this->input->get('ff');
 
 			$fi = date('Y/m/d', strtotime($fi));
 			$ff = date('Y/m/d', strtotime($ff));
@@ -109,6 +109,8 @@ class Metrics extends CI_Controller
 			$flag = false;
 			echo "<div class='row'>";
 
+			$l = 0;
+
 			for ($i=0; $i < count($arr[1]); $i++) {
 				for ($f=1; $f < count($arr); $f++) { 
 					$dia = date('l', strtotime($arr[$f][$i]->date));
@@ -136,24 +138,27 @@ class Metrics extends CI_Controller
 							echo "<hr>";								
 								echo "<div class='row'>";
 									echo "<div class='col-xs-1'>";
-										echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
+										echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
 									echo "</div>";		
 								echo "</div>";
 
 							$flag = true;
 						}elseif ($flag == false) {
 							
-							
-							echo "<div class='col-xs-2'>";
-							echo "<br>";
-							echo "<br>";
-							echo "<hr>";
-								for ($j=1; $j < count($arr); $j++) { 
-									echo "<div class='row'>";
-										echo "<p>" . $arr[$j][$i]->NomComb . "</p>";
-									echo "</div>";
-								}
-							echo "</div>";
+							if ($l == 0) {
+								
+								echo "<div class='col-xs-2'>";
+								echo "<br>";
+								echo "<br>";
+								echo "<hr>";
+									for ($j=1; $j < count($arr); $j++) { 
+										echo "<div class='row'>";
+											echo "<p>" . $arr[$j][$i]->NomComb . "</p>";
+										echo "</div>";
+									}
+								echo "</div>";
+
+							}
 							
 							echo "<div class='col-xs-1'>";
 								echo "<div class='row' style='background-color: orange;'>";
@@ -162,9 +167,10 @@ class Metrics extends CI_Controller
 								echo "</div>";
 							echo "<hr>";								
 								echo "<div class='row'>";
-									echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
+									echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
 								echo "</div>";
 
+								$l++;
 						}else{
 							echo "<div class='col-xs-1'>";
 								echo "<div class='row' style='background-color: orange;'>";
@@ -173,7 +179,7 @@ class Metrics extends CI_Controller
 								echo "</div>";
 							echo "<hr>";									
 								echo "<div class='row'>";
-									echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
+									echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
 								echo "</div>";
 						}
 					}
@@ -181,7 +187,7 @@ class Metrics extends CI_Controller
 					if ($f == (count($arr) - 1)) {
 						if ($dia == 'Sunday') {
 								echo "<div class='row'>";
-									echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
+									echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
 								echo "</div>";
 							echo "</div>";
 							echo "</div>";
@@ -190,7 +196,7 @@ class Metrics extends CI_Controller
 
 						}else{
 							echo "<div class='row'>";
-								echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
+								echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
 							echo "</div>";
 							echo "</div>";
 						}
@@ -198,7 +204,7 @@ class Metrics extends CI_Controller
 
 					if ($f != 1 && $f < (count($arr) - 1)) {
 						echo "<div class='row'>";
-							echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
+							echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
 						echo "</div>";
 					}
 				}
