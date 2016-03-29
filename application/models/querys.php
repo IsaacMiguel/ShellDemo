@@ -44,7 +44,7 @@ class Querys extends CI_Model
 
 		$db = $this->load->database($suc, true);
 
-		$data = $db->query("select sum(convert( int, turno2.dife)) as value, sum(turno2.dife* turno2.precio) as Pesos, rtrim(max(convert(char, turno1.fecha_a, 23))) as date, max(surtidores.cod_combus) as interno  , max(st_combustible) as cod_comb  , max(Combustibles.Nombre) as NomComb from turno2 left join turno1 on turno2.id_turno2=turno1.id_turno1 left join surtidores on turno2.surtidor=surtidores.codigo left join stock on surtidores.cod_combus=stock.st_interno left join Combustibles on Combustibles.codigo=stock.st_combustible	where convert(char,turno1.fecha_A,111)>= '".$fi."' and convert(char,turno1.fecha_A,111)<= '".$ff."'	group by convert(char,surtidores.cod_combus,103)+convert(char,turno1.fecha_A,103) order by NomComb, date");
+		$data = $db->query("select sum(convert( int, turno2.dife)) as value, sum(convert( int, turno2.dife* turno2.precio)) as Pesos, rtrim(max(convert(char, turno1.fecha_a, 23))) as date, max(surtidores.cod_combus) as interno  , max(st_combustible) as cod_comb  , max(Combustibles.Nombre) as NomComb from turno2 left join turno1 on turno2.id_turno2=turno1.id_turno1 left join surtidores on turno2.surtidor=surtidores.codigo left join stock on surtidores.cod_combus=stock.st_interno left join Combustibles on Combustibles.codigo=stock.st_combustible	where convert(char,turno1.fecha_A,111)>= '".$fi."' and convert(char,turno1.fecha_A,111)<= '".$ff."'	group by convert(char,surtidores.cod_combus,103)+convert(char,turno1.fecha_A,103) order by NomComb, date");
 
 		return $data->result();
 	}
