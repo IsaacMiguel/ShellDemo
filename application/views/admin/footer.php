@@ -64,7 +64,7 @@
                             });
                         });
                         
-                        $.post('http://opecom.com.ar/index.php/metrics/getMetricsGrid/',
+                        $.get('http://opecom.com.ar/index.php/metrics/getMetricsGrid/',
                             {
                                 fi : fi,
                                 ff : ff
