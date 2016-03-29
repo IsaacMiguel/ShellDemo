@@ -59,7 +59,7 @@
                                 right: 80,
                                 target: document.getElementById('fake_users1'),
                                 x_accessor: 'date',
-                                y_accessor: 'value',
+                                y_accessor: 'Pesos',
                                 legend: fuels
                             });
                         });

@@ -138,7 +138,7 @@ class Metrics extends CI_Controller
 							echo "<hr>";								
 								echo "<div class='row'>";
 									echo "<div class='col-xs-1'>";
-										echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
+										echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
 									echo "</div>";		
 								echo "</div>";
 
@@ -167,7 +167,7 @@ class Metrics extends CI_Controller
 								echo "</div>";
 							echo "<hr>";								
 								echo "<div class='row'>";
-									echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
+									echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
 								echo "</div>";
 
 								$l++;
@@ -179,7 +179,7 @@ class Metrics extends CI_Controller
 								echo "</div>";
 							echo "<hr>";									
 								echo "<div class='row'>";
-									echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
+									echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
 								echo "</div>";
 						}
 					}
@@ -187,7 +187,7 @@ class Metrics extends CI_Controller
 					if ($f == (count($arr) - 1)) {
 						if ($dia == 'Sunday') {
 								echo "<div class='row'>";
-									echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
+									echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
 								echo "</div>";
 							echo "</div>";
 							echo "</div>";
@@ -196,7 +196,7 @@ class Metrics extends CI_Controller
 
 						}else{
 							echo "<div class='row'>";
-								echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
+								echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
 							echo "</div>";
 							echo "</div>";
 						}
@@ -204,7 +204,7 @@ class Metrics extends CI_Controller
 
 					if ($f != 1 && $f < (count($arr) - 1)) {
 						echo "<div class='row'>";
-							echo "<p>$-" . intval($arr[$f][$i]->value) . "</p>";
+							echo "<p>$-" . intval($arr[$f][$i]->Pesos) . "</p>";
 						echo "</div>";
 					}
 				}
